@@ -73,3 +73,5 @@ Animations: open `level-3/task-3-animations/index.html`. It uses GSAP timelines,
 - SPA: `npm run build` in `level-2/task-1-spa`, then deploy the `dist` folder. The included redirect files keep `/about` and `/contact` on refresh.
 - Tailwind page: deploy `level-2/task-3-tailwind/dist`.
 - Static tasks can be deployed as plain files.
+
+Submitted for the Codveda front-end internship.
