@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>After Dusk - gallery sequence</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Outfit:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="progress" aria-hidden="true"></div>
+
+    <header class="top">
+      <p>After Dusk</p>
+      <button type="button" id="replay">Play sequence</button>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="show-title">
+        <div class="orb" aria-hidden="true"></div>
+        <p class="eyebrow">Room sequence</p>
+        <h1 id="show-title">
+          <span class="line"><span class="hero-line">Three rooms</span></span>
+          <span class="line"><span class="hero-line">after dark.</span></span>
+        </h1>
+        <p class="hero-sub">
+          Scroll to walk the gallery. The light follows your cursor, the rooms
+          slide with the page, and each object tilts when you move over it.
+        </p>
+        <p class="cue" aria-hidden="true"><i></i><span>Scroll</span></p>
+      </section>
+
+      <section class="pin" aria-labelledby="walk-title">
+        <div class="pin-head">
+          <h2 id="walk-title">Walk the rooms</h2>
+          <p class="pin-count"><span id="room-index">01</span> / 03</p>
+        </div>
+        <div class="track">
+          <article class="panel">
+            <div class="scene lamp-scene" aria-hidden="true">
+              <span class="cord"></span>
+              <span class="shade"></span>
+              <span class="glow"></span>
+              <span class="pool"></span>
+            </div>
+            <div class="panel-copy">
+              <p class="index">01</p>
+              <h3>Lamps</h3>
+              <p>Brass shades hung low enough to read a label without a phone.</p>
+            </div>
+          </article>
+          <article class="panel">
+            <figure class="scene">
+              <img
+                src="../../level-1/task-1-landing/assets/workshop.webp"
+                alt="Close view of wood grain with a metal hinge"
+                width="1280"
+                height="960"
+              />
+            </figure>
+            <div class="panel-copy">
+              <p class="index">02</p>
+              <h3>Joinery</h3>
+              <p>A hinge set into the rail and left where you can see the joint.</p>
+            </div>
+          </article>
+          <article class="panel">
+            <figure class="scene">
+              <img
+                src="../../level-1/task-1-landing/assets/chair.webp"
+                alt="Grey wool armchair with a light wood frame"
+                width="1120"
+                height="1400"
+              />
+            </figure>
+            <div class="panel-copy">
+              <p class="index">03</p>
+              <h3>The unfinished chair</h3>
+              <p>Ash frame, no cushion yet. Visitors are asked not to sit.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="scrub" aria-label="Gallery note">
+        <p class="scrub-line">
+          <span class="scrub-word">Light</span>
+          <span class="scrub-word">stays</span>
+          <span class="scrub-word">low.</span>
+          <span class="scrub-word">The</span>
+          <span class="scrub-word">rooms</span>
+          <span class="scrub-word">do</span>
+          <span class="scrub-word">the</span>
+          <span class="scrub-word">rest.</span>
+        </p>
+      </section>
+
+      <section class="objects" aria-labelledby="objects-title">
+        <div class="objects-head">
+          <p class="index">Look closer</p>
+          <h2 id="objects-title">Move across a piece. Click to open it.</h2>
+        </div>
+        <div class="object-grid">
+          <button class="object" type="button" aria-expanded="false">
+            <span class="object-visual lamp-scene" aria-hidden="true">
+              <span class="shade"></span>
+              <span class="glow"></span>
+            </span>
+            <span class="object-copy">
+              <span class="object-kicker">North wall</span>
+              <span class="object-title">Four shades, one switch.</span>
+              <span class="object-more">The circuit is shared. One click drops the whole wall to reading light.</span>
+            </span>
+          </button>
+          <button class="object" type="button" aria-expanded="false">
+            <span class="object-visual" aria-hidden="true">
+              <img
+                src="../../level-1/task-1-landing/assets/workshop.webp"
+                alt=""
+                width="1280"
+                height="960"
+              />
+            </span>
+            <span class="object-copy">
+              <span class="object-kicker">Joinery</span>
+              <span class="object-title">The hinge stays in the wood.</span>
+              <span class="object-more">Left visible so you can see how the rail is held.</span>
+            </span>
+          </button>
+          <button class="object" type="button" aria-expanded="false">
+            <span class="object-visual" aria-hidden="true">
+              <img
+                src="../../level-1/task-1-landing/assets/chair.webp"
+                alt=""
+                width="1120"
+                height="1400"
+              />
+            </span>
+            <span class="object-copy">
+              <span class="object-kicker">Do not sit</span>
+              <span class="object-title">The joint is still drying.</span>
+              <span class="object-more">Hovering is allowed. Sitting waits until the glue has set.</span>
+            </span>
+          </button>
+        </div>
+      </section>
+
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <span>Brass</span><span>Wool</span><span>Ash</span><span>Dusk</span>
+          <span>Brass</span><span>Wool</span><span>Ash</span><span>Dusk</span>
+        </div>
+      </div>
+    </main>
+
+    <footer>Built by Amirhossein Najafi for the Codveda Front-End Internship</footer>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
+    <script src="script.js" defer></script>
+  </body>
+</html>

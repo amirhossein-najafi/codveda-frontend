@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Notes — Northroom{% endblock %}
+{% block content %}
+  <p class="meta">A small journal for signed-in writers.</p>
+  <h1>Notes</h1>
+  {% if posts %}
+    {% for post in posts %}
+      <article class="post">
+        <h2><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></h2>
+        <p class="meta">{{ post.author.username }} · {{ post.created_at|date:"N j, Y" }}</p>
+        <p>{{ post.body|truncatewords:28 }}</p>
+      </article>
+    {% endfor %}
+  {% else %}
+    <p>No notes yet.</p>
+  {% endif %}
+{% endblock %}

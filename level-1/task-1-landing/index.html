@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Marlow makes quiet reading chairs for long evenings. A responsive landing page for the Codveda front-end internship."
+    />
+    <title>Marlow - Chairs for long reading</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,460;9..144,620&family=Outfit:wght@380;520;640&display=swap"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,460;9..144,620&family=Outfit:wght@380;520;640&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
+    <link rel="preload" href="assets/chair.webp" as="image" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <a class="logo" href="#top">Marlow</a>
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-nav"
+      >
+        <span class="sr-only">Open menu</span>
+        <span class="bars" aria-hidden="true"></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <a href="#features">Features</a>
+        <a href="#craft">Craft</a>
+        <a href="#atelier">Atelier</a>
+        <a class="nav-cta" href="#visit">Book a sit</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Reading furniture, made slowly</p>
+          <h1 id="hero-title">A chair that disappears into the page.</h1>
+          <p class="lede">
+            Marlow is a low, deep seat with a headrest that actually holds a
+            book open. Built in small batches from ash, wool, and brass.
+          </p>
+          <div class="hero-actions">
+            <a class="button" href="#visit">Reserve a fitting</a>
+            <a class="button button-ghost" href="#features">See the details</a>
+          </div>
+        </div>
+        <figure class="hero-figure">
+          <img
+            src="assets/chair.webp"
+            alt="Grey wool armchair with a light wood frame"
+            width="1120"
+            height="1400"
+            fetchpriority="high"
+            decoding="async"
+          />
+          <figcaption>Model 04 - ash frame, undyed wool</figcaption>
+        </figure>
+      </section>
+
+      <section class="features" id="features" aria-labelledby="features-title">
+        <div class="section-head">
+          <p class="eyebrow">Features</p>
+          <h2 id="features-title">Three things a reading chair must do.</h2>
+        </div>
+        <ul class="feature-grid">
+          <li class="reveal">
+            <span class="index">01</span>
+            <h3>Hold the book, not your neck</h3>
+            <p>
+              The wing is pitched so a paperback rests without your hands. You
+              can turn a page and come back to the same angle.
+            </p>
+          </li>
+          <li class="reveal">
+            <span class="index">02</span>
+            <h3>Quiet on a wooden floor</h3>
+            <p>
+              Felt glides and a damped rocker. No squeak when you shift, no
+              scrape when you pull it toward the lamp.
+            </p>
+          </li>
+          <li class="reveal">
+            <span class="index">03</span>
+            <h3>A seat you can stay in</h3>
+            <p>
+              Wool cushion, pocketed for a notebook. The depth is cut for an
+              evening, not a meeting.
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="craft" id="craft" aria-labelledby="craft-title">
+        <div class="craft-copy">
+          <p class="eyebrow">Craft</p>
+          <h2 id="craft-title">Ash, wool, and a single brass bolt.</h2>
+          <p>
+            Frames are steam-bent in our workshop and left unfinished on the
+            inside, so the grain stays visible where your hand rests. Each
+            chair is numbered under the seat.
+          </p>
+          <dl class="specs">
+            <div>
+              <dt>Frame</dt>
+              <dd>European ash</dd>
+            </div>
+            <div>
+              <dt>Cushion</dt>
+              <dd>Undyed wool</dd>
+            </div>
+            <div>
+              <dt>Lead time</dt>
+              <dd>6-8 weeks</dd>
+            </div>
+          </dl>
+        </div>
+        <figure class="craft-photo">
+          <img
+            src="assets/workshop.webp"
+            alt="Close view of wood grain with a metal hinge"
+            width="1280"
+            height="960"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+      </section>
+
+      <section class="atelier" id="atelier" aria-labelledby="atelier-title">
+        <p class="eyebrow">Atelier</p>
+        <h2 id="atelier-title">Visit the room before you order.</h2>
+        <p>
+          Fittings are by appointment on weekday afternoons. Bring the book you
+          are actually reading. We adjust the wing while you sit.
+        </p>
+      </section>
+
+      <section class="visit" id="visit" aria-labelledby="visit-title">
+        <h2 id="visit-title">Book a sit</h2>
+        <p>Tell us a day that works. We reply within two working days.</p>
+        <a class="button" href="mailto:studio@marlow.example">Write the studio</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Marlow Atelier</p>
+      <p>Built by Amirhossein Najafi for the Codveda Front-End Internship</p>
+    </footer>
+
+    <button class="to-top" type="button" hidden>Back to top</button>
+    <script src="script.js" defer></script>
+  </body>
+</html>

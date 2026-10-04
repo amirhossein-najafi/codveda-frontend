@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Libre Baskerville", Georgia, serif;
+  --font-sans: "Karla", "Segoe UI", sans-serif;
+  --color-cream: #f6f0e6;
+  --color-ink: #221c18;
+  --color-hearth: #8f3d2b;
+  --color-sage: #5e6b52;
+  --color-sand: #e7dccb;
+}
+
+@layer components {
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    background: var(--color-hearth);
+    color: var(--color-cream);
+    padding: 0.75rem 1.1rem;
+    text-decoration: none;
+    border: 0;
+    font: inherit;
+    cursor: pointer;
+  }
+
+  .btn-quiet {
+    background: transparent;
+    color: var(--color-ink);
+    box-shadow: inset 0 0 0 1px var(--color-ink);
+  }
+
+  .card {
+    border-radius: 1.25rem;
+    background: white;
+    padding: 1.25rem;
+    box-shadow: inset 0 0 0 1px rgb(231 220 203);
+  }
+
+  .badge {
+    display: inline-flex;
+    border-radius: 999px;
+    background: var(--color-sand);
+    color: var(--color-sage);
+    padding: 0.2rem 0.6rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .field {
+    width: 100%;
+    border-radius: 0.8rem;
+    border: 1px solid var(--color-sand);
+    background: var(--color-cream);
+    padding: 0.8rem 0.85rem;
+    font: inherit;
+    color: var(--color-ink);
+  }
+}
+
+.skip {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  background: var(--color-ink);
+  color: var(--color-cream);
+  padding: 0.4rem 0.7rem;
+}
+
+.skip:focus {
+  top: 0.75rem;
+}
+
+.nav-panel {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding: 1rem 1.25rem 1.25rem;
+  background: var(--color-cream);
+  border-bottom: 1px solid var(--color-sand);
+}
+
+.nav-panel.is-open {
+  display: flex;
+}
+
+.nav-panel a:not(.btn) {
+  text-decoration: none;
+}
+
+.btn:focus-visible,
+.field:focus-visible,
+#nav-toggle:focus-visible,
+.nav-panel a:focus-visible {
+  outline: 2px solid var(--color-hearth);
+  outline-offset: 3px;
+}
+
+@media (min-width: 768px) {
+  .nav-panel,
+  .nav-panel.is-open {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 0;
+    border: 0;
+    background: transparent;
+  }
+}

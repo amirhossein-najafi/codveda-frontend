@@ -1,0 +1,8 @@
+node_modules/
+storybook-static/
+dist/
+.venv/
+__pycache__/
+*.pyc
+db.sqlite3
+sent_mail/

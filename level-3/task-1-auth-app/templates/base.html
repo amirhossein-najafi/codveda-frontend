@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{% block title %}Northroom{% endblock %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,520&family=Outfit:wght@400;560&display=swap" rel="stylesheet" />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'site.css' %}" />
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="site-header">
+        <a class="logo" href="{% url 'post_list' %}">Northroom</a>
+        <nav class="nav" aria-label="Account">
+          {% if user.is_authenticated %}
+            <a href="{% url 'post_create' %}">New note</a>
+            <form method="post" action="{% url 'logout' %}">
+              {% csrf_token %}
+              <button class="quiet" type="submit">Log out</button>
+            </form>
+          {% else %}
+            <a href="{% url 'login' %}">Log in</a>
+            <a href="{% url 'register' %}">Register</a>
+          {% endif %}
+        </nav>
+      </header>
+      <main>
+        {% block content %}{% endblock %}
+      </main>
+      <footer class="site-footer">
+        <p>Built by Amirhossein Najafi, Codveda Front-End Internship</p>
+      </footer>
+    </div>
+  </body>
+</html>

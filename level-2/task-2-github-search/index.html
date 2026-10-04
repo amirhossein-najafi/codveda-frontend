@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quarry — GitHub repository search</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@420;560&family=Space+Grotesk:wght@520;650&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="wrap">
+      <header>
+        <p class="mark">Quarry</p>
+        <h1>Search public repositories.</h1>
+        <p class="lede">
+          Results come from the GitHub REST API. Typing waits a third of a
+          second so each keystroke does not fire a request.
+        </p>
+      </header>
+
+      <form id="search-form" role="search">
+        <label for="query">Repository name or topic</label>
+        <input
+          id="query"
+          name="query"
+          type="search"
+          placeholder="Try: vite react"
+          autocomplete="off"
+          enterkeyhint="search"
+        />
+      </form>
+
+      <p class="status" id="status" role="status" aria-live="polite"></p>
+      <ul class="results" id="results"></ul>
+      <footer>Built by Amirhossein Najafi — Codveda Front-End Internship</footer>
+    </main>
+    <script src="script.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Still — Counter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Syne:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="stage" aria-labelledby="title">
+        <p class="kicker">Still</p>
+        <h1 id="title">Count</h1>
+        <p class="count" id="count" aria-live="polite">0</p>
+        <div class="controls">
+          <button type="button" id="decrement">
+            <span aria-hidden="true">−</span>
+            <span class="label">Down</span>
+          </button>
+          <button type="button" id="reset">Reset</button>
+          <button type="button" id="increment">
+            <span aria-hidden="true">+</span>
+            <span class="label">Up</span>
+          </button>
+        </div>
+        <p class="note" id="note" role="status">Ready</p>
+      </section>
+      <footer>Built by Amirhossein Najafi, Codveda Front-End Internship</footer>
+    </main>
+    <script src="script.js" defer></script>
+  </body>
+</html>

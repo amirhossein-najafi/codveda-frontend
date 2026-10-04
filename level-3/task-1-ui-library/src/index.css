@@ -1,0 +1,49 @@
+@import "./theme.css";
+
+:root {
+  color: #1c2421;
+  background: #eef2ef;
+  font-family: "Source Sans 3", "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.demo {
+  width: min(40rem, calc(100% - 2rem));
+  margin: 3rem auto;
+}
+
+.eyebrow {
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #1f3d36;
+  font-size: 0.75rem;
+}
+
+h1 {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 520;
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin: 0.3rem 0 1.2rem;
+}
+
+.stack,
+.row {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.row {
+  grid-auto-flow: column;
+  justify-content: start;
+}
+
+footer {
+  margin-top: 2rem;
+  color: #5d6a64;
+  font-size: 0.85rem;
+}

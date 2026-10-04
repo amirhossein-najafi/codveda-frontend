@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Passage — Create an account</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,480;6..72,600&family=Public+Sans:wght@420;560;680&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="intro">
+        <p class="mark">Passage</p>
+        <h1>Open a reader account.</h1>
+        <p>
+          One profile for loans, holds, and the evening list. We check each
+          field as you leave it.
+        </p>
+      </section>
+
+      <form id="signup" class="card" novalidate>
+        <div class="field" data-field="name">
+          <label for="name">Full name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required />
+          <p class="error" id="name-error" role="alert"></p>
+        </div>
+
+        <div class="field" data-field="email">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required />
+          <p class="error" id="email-error" role="alert"></p>
+        </div>
+
+        <div class="field" data-field="phone">
+          <label for="phone">Phone number</label>
+          <input
+            id="phone"
+            name="phone"
+            type="tel"
+            autocomplete="tel"
+            inputmode="tel"
+            placeholder="+98 912 000 0000"
+            required
+          />
+          <p class="error" id="phone-error" role="alert"></p>
+        </div>
+
+        <div class="field" data-field="password">
+          <label for="password">Password</label>
+          <div class="password-row">
+            <input
+              id="password"
+              name="password"
+              type="password"
+              autocomplete="new-password"
+              required
+            />
+            <button class="ghost" type="button" id="toggle-password" aria-pressed="false">
+              Show
+            </button>
+          </div>
+          <div class="meter" aria-hidden="true">
+            <span id="meter-bar"></span>
+          </div>
+          <p class="hint" id="strength-label">Strength appears as you type.</p>
+          <p class="error" id="password-error" role="alert"></p>
+        </div>
+
+        <button class="submit" type="submit">Create account</button>
+      </form>
+
+      <section class="success" id="success" hidden>
+        <h2 tabindex="-1">Account details look good.</h2>
+        <p id="success-copy"></p>
+        <button class="submit" type="button" id="reset-form">Enter another</button>
+      </section>
+
+      <footer>
+        <p>Built by Amirhossein Najafi — Codveda Front-End Internship</p>
+      </footer>
+    </main>
+    <script src="script.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}{{ post.title }} — Northroom{% endblock %}
+{% block content %}
+  <article>
+    <p class="meta"><a href="{% url 'post_list' %}">All notes</a></p>
+    <h1>{{ post.title }}</h1>
+    <p class="meta">{{ post.author.username }} · {{ post.created_at|date:"N j, Y" }}</p>
+    <p>{{ post.body|linebreaks }}</p>
+  </article>
+{% endblock %}
