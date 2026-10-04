@@ -74,4 +74,6 @@ Animations: open `level-3/task-3-animations/index.html`. It uses GSAP timelines,
 - Tailwind page: deploy `level-2/task-3-tailwind/dist`.
 - Static tasks can be deployed as plain files.
 
+GitHub: https://github.com/amirhossein-najafi/codveda-frontend
+
 Submitted for the Codveda front-end internship.
